@@ -1,6 +1,6 @@
-	var myTable = document.getElementById("data");
+var myTable = document.getElementById("data");
 
-for(var i= 0;i <= firstName.length - 1;i++){
+for(var i = 0;i <= firstName.length - 1;i++){
 	var row = myTable.insertRow(i);
 
 	var cellDate = row.insertCell(0);
@@ -10,7 +10,7 @@ for(var i= 0;i <= firstName.length - 1;i++){
 	var cellAddress = row.insertCell(4);
 		
 	cellDate.innerHTML = date[i] ;
-	cellAmount.innerHTML = amount[i];
+	cellAmount.innerHTML = "$"+amount[i].toFixed(2);
 	cellFirstName.innerHTML = firstName[i] ;
 	cellLastName.innerHTML = lastName[i] ;
 	cellAddress.innerHTML = street[i] + "<br>" +
@@ -18,7 +18,9 @@ for(var i= 0;i <= firstName.length - 1;i++){
 						    state[i] + " " +
 						    zip[i] + "<br>";
 
-
+	if( i % 2){
+		myTable.rows[i].classList.add("yellowrow");
+	}
 }
 
 // total contributors
@@ -27,12 +29,10 @@ for(var i= 0;i <= firstName.length - 1;i++){
 	totalCont.innerHTML = rowCount; 
 
 // total contributions
-	var totalAmount = document.getElementById("totalAmount");
+	var totalAmount = document.getElementById("totalAmount");	
 
-	for(var i = 1;i <= rowCount;i++){
-		var amount = 0;
-
-		amount += parseInt(myTable.rows[i].cells[1].innerHTML);
+	for(var i = 0,amount = 0;i <= rowCount - 1;i++){
+		amount += parseFloat(myTable.rows[i].cells[1].innerHTML);
 		totalAmount.innerHTML = "$"+amount.toFixed(2);
 	}
 
