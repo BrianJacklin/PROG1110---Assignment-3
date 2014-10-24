@@ -1,4 +1,4 @@
-PROG1110---Assignment-3
+PROG1110---Assignment-2
 =======================
 
-Assignment #3 for PROG1110
+Assignment #2 for PROG1110
