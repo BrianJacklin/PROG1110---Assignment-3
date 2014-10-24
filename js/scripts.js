@@ -1,15 +1,43 @@
+	var myTable = document.getElementById("data");
+
+for(var i= 0;i <= firstName.length - 1;i++){
+	var row = myTable.insertRow(i);
+
+	var cellDate = row.insertCell(0);
+	var cellAmount = row.insertCell(1);
+	var cellFirstName = row.insertCell(2);
+	var cellLastName = row.insertCell(3);
+	var cellAddress = row.insertCell(4);
+		
+	cellDate.innerHTML = date[i] ;
+	cellAmount.innerHTML = amount[i];
+	cellFirstName.innerHTML = firstName[i] ;
+	cellLastName.innerHTML = lastName[i] ;
+	cellAddress.innerHTML = street[i] + "<br>" +
+						    city[i] + ", " + 
+						    state[i] + " " +
+						    zip[i] + "<br>";
+
+
+}
+
 // total contributors
 	var totalCont = document.getElementById("contributions");
-	var rowCount = document.getElementById("lighthouse-table").rows.length - 1; 
+	var rowCount = myTable.rows.length; 
 	totalCont.innerHTML = rowCount; 
 
 // total contributions
-	var myTable = document.getElementById("lighthouse-table");
 	var totalAmount = document.getElementById("totalAmount");
-	var amount = 0
-	var i = 1;
-		
-	for(i;i <= rowCount;i++){
+
+	for(var i = 1;i <= rowCount;i++){
+		var amount = 0;
+
 		amount += parseInt(myTable.rows[i].cells[1].innerHTML);
 		totalAmount.innerHTML = "$"+amount.toFixed(2);
 	}
+
+/*
+if(myTable.rows % 2){
+	alert("odd");
+}
+*/
