@@ -40,11 +40,11 @@ window.onload = function() {
 
 		// total contributions
 		for(var i = 0,amount = 0, len = rowCount.length;i <= len - 1;i++){
-			amount += parseFloat(myTable.rows[i]	       // get row use += to add at each iteration
-									    .cells[1] 		   // get amount cell
-									    .innerHTML 		   // get contents 
-									    .substring(1));    // remove $ sign
-			totalAmount.innerHTML = "$"+amount.toFixed(2); // format and display
+			amount += parseFloat(myTable.rows[i]	      // get row use += to add at each iteration
+						    .cells[1]	      // get amount cell
+					       	    .innerHTML 	      // get contents from amount cell
+						    .substring(1));   // remove $ sign otherwise it will display NaN
+			totalAmount.innerHTML = "$"+amount.toFixed(2);// format and display total
 		}
 	}
 	
