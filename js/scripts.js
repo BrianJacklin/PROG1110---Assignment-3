@@ -24,9 +24,9 @@ window.onload = function() {
 			cellFirstName.innerHTML = firstName[i] ;
 			cellLastName.innerHTML = lastName[i] ;
 			cellAddress.innerHTML = street[i] + "<br>" +
-								    city[i] + ", " + 
-								    state[i] + " " +
-								    zip[i] + "<br>";
+						city[i] + ", " + 
+						state[i] + " " +
+						zip[i] + "<br>";
 			//Stripe the table						    
 			if( i % 2){
 				myTable.rows[i].classList.add("yellowrow");
