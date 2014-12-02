@@ -13,15 +13,14 @@
 	date:      Contains the date of the contribution.
 */
 
-var firstName = new Array();
-var lastName = new Array();
-var street = new Array();
-var city = new Array();
-var state= new Array();
-var zip = new Array();
-var amount = new Array();
-var date = new Array()
-
+var firstName = [];
+var lastName = [];
+var street = [];
+var city = [];
+var state= [];
+var zip = [];
+var amount = [];
+var date = [];
 
 firstName[0]="Nina";
 lastName[0]="Largent";
