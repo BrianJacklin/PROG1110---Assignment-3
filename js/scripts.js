@@ -1,3 +1,4 @@
+//this is a single-line commment
 window.onload = function() {
 	//Globals
 	var myTable = document.getElementById("data"),
