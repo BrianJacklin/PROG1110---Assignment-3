@@ -1,11 +1,11 @@
-var firstName = [];
-var lastName = [];
-var street = [];
-var city = [];
-var state= [];
-var zip = [];
-var amount = [];
-var date = [];
+var firstName = [],
+lastName = [],
+street = [],
+city = [],
+state= [],
+zip = [],
+amount = [],
+date = [];
 
 firstName[0]="Nina";
 lastName[0]="Largent";
